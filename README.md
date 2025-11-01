@@ -42,14 +42,16 @@ Open `getting-started.ipynb` to see examples of:
 └── requirements.txt         # Python dependencies (if using pip)
 ```
 
-## For conda:
+## Setting up your virtual environment (if using)
+
+### For conda:
 
 ```bash
 conda env create -f environment.yml
 conda activate soccer-hackathon # to activate your virtual environment
 ```
 
-## For pip:
+### For pip:
 
 ```bash
 python -m venv venv
