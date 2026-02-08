@@ -17,10 +17,10 @@ Developing a multi-dimensional rating system with 8 granular metrics:
 - **Passing:** Passing Accuracy, Ball Progression, Long Passing
 
 ### Progress (Checkpoint - Feb 9)
-**Data Pipeline:** Successfully loaded 962,990 events from 306 matches
-**Event Weighting System:** Defined position-aware weights for attack/defense/passing
-**Player Ratings:** Generated ratings for 402 players across 3 positions
-**Role-Specific Metrics:** Implemented granular metrics tailored to positions
+- **Data Pipeline:** Successfully loaded 962,990 events from 306 matches
+- **Event Weighting System:** Defined position-aware weights for attack/defense/passing
+- **Player Ratings:** Generated ratings for 402 players across 3 positions
+- **Role-Specific Metrics:** Implemented granular metrics tailored to positions
 
 ### Next Steps
 - [ ] Refine zone classification (team-aware implementation)
