@@ -1,106 +1,54 @@
-# Soccer Data Analytics Hackathon - Getting Started
+# Bundesliga Player Valuation System
+## Soccer Data Analytics Hackathon 2026
 
-**Event Dates:** February 27–28, 2026  
-**Location:** Northeastern University / Network Science Institute  
-**Supported by:** PySport
+### Team Members
+- [Your Name]
 
-## Overview
+### Project Overview
+Building a transparent, interpretable player valuation metric using IMPECT Open Data from the 2023/24 Bundesliga season.
 
-This repository provides starter code and instructions for the Soccer Data Analytics Hackathon. You'll work with **IMPECT Open Data** containing 306 German Bundesliga matches from the 2023/24 season to tackle one of two challenge prompts.
+**Prompt:** (B) Build a Transparent Player Valuation Metric
 
-## Challenge Prompts (Choose One)
+### Approach
+Developing a multi-dimensional rating system with 8 granular metrics:
+- **Attacking:** Finishing, Chance Creation, Dribbling
+- **Defensive:** Ball Winning, Defensive Actions
+- **Passing:** Passing Accuracy, Ball Progression, Long Passing
 
-### Option A: Starting Eleven Lineup Construction
-Recommend an optimal starting eleven and/or substitution plan to maximize team cohesion and ball progression. Build a player-to-player pass network, analyze network structure, and compare alternative lineups with clear visualizations.
+### Progress (Checkpoint - Feb 9)
+✅ **Data Pipeline:** Successfully loaded 962,990 events from 306 matches
+✅ **Event Weighting System:** Defined position-aware weights for attack/defense/passing
+✅ **Player Ratings:** Generated ratings for 402 players across 3 positions
+✅ **Role-Specific Metrics:** Implemented granular metrics tailored to positions
 
-### Option B: Transparent Player Valuation Metric
-Define an interpretable attacking or defensive metric using event data. Create a metric definition, produce a leaderboard comparing players, present a case study, and discuss limitations.
+### Next Steps
+- [ ] Refine zone classification (team-aware implementation)
+- [ ] Create visualizations (player leaderboards, radar charts)
+- [ ] Select case study player
+- [ ] Validate against ground truth (goals, assists)
+- [ ] Build final presentation
 
-## Quick Start
+### Tech Stack
+- Python 3.11
+- kloppy (soccer data processing)
+- polars (high-performance dataframes)
+- numpy, scikit-learn
 
-### 1. Installation (within Jupyter notebook)
+### Repository Structure
+- `notebooks/1_data_loading.ipynb` - Loads and processes IMPECT Open Data
+- `notebooks/2_event_scoring.ipynb` - Calculates event-based player ratings
+- `notebooks/3_role_specific_ratings.ipynb` - Computes granular role-specific metrics
 
-```bash
-!pip install "kloppy>=3.18.0" polars pyarrow
+### Data Source
+IMPECT Open Data - German Bundesliga 2023/24 season (306 matches)
 ```
 
-### 2. Explore the Notebook
-
-Open `getting-started.ipynb` to see examples of:
-- Loading matches and squad data
-- Filtering for specific event types (passes, shots)
-- Transforming coordinate systems
-- Exporting to Polars/Pandas DataFrames
-
-## Project Structure
-
+3. **Create requirements.txt:**
 ```
-SoccerImpectHackathon/
-├── getting-started.ipynb        # Tutorial notebook
-├── environment.yml              # Conda environment
-├── requirements.txt             # Python dependencies
-├── .gitignore                   # Git ignore rules
-├── LICENSE                      # MIT License
-├── README.md                    # This file
-└── CONTRIBUTING.md              # Contribution guidelines
-```
-
-## Deliverables (Due Friday, February 27, 2026)
-
-1. **Slide deck** (PDF, max 8 slides) with clear visualizations
-2. **GitHub repository** with:
-   - Clean, reproducible code
-   - `README.md` explaining your approach
-   - `environment.yml` or `requirements.txt`
-   - Open-source license (MIT or Apache 2.0)
-
-## Timeline
-
-| Milestone | Date |
-|-----------|------|
-| Release & Data Primer | Monday, November 3, 2025 |
-| Registration Deadline | Wednesday, December 31, 2025 |
-| Checkpoint (draft slides/repo) | Monday, February 2, 2026 |
-| Final Work Session & Judging | Friday, February 27, 2026 |
-| Industry Talks & Awards | Saturday, February 28, 2026 |
-
-## Suggested Tools
-
-- **Python:** kloppy, polars, pandas, numpy, mplsoccer, databallpy, networkx
-- **R:** tidyverse, igraph
-- Any language is acceptable as long as your work is reproducible
-
-## Resources
-
-- [Kloppy Documentation](https://kloppy.pysport.org/)
-- [IMPECT Open Data](https://github.com/ImpectAPI/open-data)
-- [PySport](https://pysport.org/)
-
-## License & Ethics
-
-- IMPECT Open Data is for **non-commercial use only**
-- Cite all sources appropriately
-- If using AI tools, document where and how they were used
-  - For example: This .README was generated with the help of Claude Sonnet 4.5
-- Be transparent about limitations in your methodology
-
-## Judging Criteria (100 points)
-
-- Problem framing & soccer context (10 pts)
-- Data engineering & correctness (15 pts)
-- Methodology quality (15 pts)
-- Validation & robustness (15 pts)
-- Results & insight (15 pts)
-- Communication & visualization (15 pts)
-- Reproducibility & ethics (15 pts)
-
-## Contact
-
-Questions? Email **northeasternsportsanalytics@gmail.com**
-
----
-
-**Good luck and happy hacking!** ⚽📊
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
+kloppy>=3.18.0
+polars>=0.20.0
+pandas>=2.0.0
+numpy>=1.24.0
+scikit-learn>=1.3.0
+matplotlib>=3.7.0
+requests>=2.31.0
