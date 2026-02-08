@@ -2,7 +2,8 @@
 ## Soccer Data Analytics Hackathon 2026
 
 ### Team Members
-- [Your Name]
+- Tanish Bhilare
+- Mohit Sharma
 
 ### Project Overview
 Building a transparent, interpretable player valuation metric using IMPECT Open Data from the 2023/24 Bundesliga season.
